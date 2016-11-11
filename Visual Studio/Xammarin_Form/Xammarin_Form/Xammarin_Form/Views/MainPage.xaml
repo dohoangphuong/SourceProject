@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_1022_Mobile"
+             x:Class="_1022_Mobile.MainPage">
+  <StackLayout>
+    <Label Text="Chào mừng bạn đến với tổng đài 1022"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" x:Name="MyLabel"/>
+
+    <Button Text="Tap for click count!"
+          Clicked="OnButtonClicked"  />
+    
+    <Button Text="Phản ánh" ClassId="btnThemPhanAnh"
+          Clicked="OnButtonPhanAnhClicked"  />
+
+    <Button Text="Danh sách" ClassId="btnDanhSach"
+          Clicked="OnButtonPhanAnhClicked"  />
+    
+    <ListView x:Name="listView"
+      ItemTapped="OnItemTapped"
+      ItemsSource="{Binding .}" />
+    
+  </StackLayout>
+
+</ContentPage>
